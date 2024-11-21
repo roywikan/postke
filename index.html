@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Post Article Form</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Create a New Post</h1>
+    <form id="blogForm" name="blogdb" method="POST" data-netlify="true" enctype="multipart/form-data" data-netlify-honeypot="bot-field" netlify>
+        <input type="hidden" name="form-name" value="blogdb">
+        <input type="hidden" name="bot-field">
+      
+      <label for="title">Title</label>
+      <input type="text" id="title" name="title" required>
+      
+      <label for="slug">Slug</label>
+      <input type="text" id="slug" name="slug" required>
+
+      <label for="tags">Tags (comma-separated)</label>
+      <input type="text" id="tags" name="tags">
+
+      <label for="category">Category</label>
+      <input type="text" id="category" name="category" >
+
+      <label for="bodypost">Body</label>
+      <textarea id="bodypost" name="bodypost" rows="5" required></textarea>
+
+      <label for="author">Author</label>
+      <input type="text" id="author" name="author" >
+
+      <label for="imagefile">Image File</label>
+      <input type="file" id="imagefile" name="imagefile" accept="image/*" >
+
+      <button type="submit">Submit Post</button>
+    </form>
+
+    <h2>Post Snippets</h2>
+    <div id="snippets" class="flex-grid"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
